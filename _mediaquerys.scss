@@ -1,0 +1,29 @@
+// Preload map utility
+@use 'sass:map';
+
+// Set breakpoints for media query
+$breakpoints: (
+  xSmall: 700px,
+  small: 800px,
+  medium: 1024px,
+  large: 1280px,
+  xLarge: 1600px,
+);
+
+// min-width
+@mixin minQ($key) {
+  $size: map.get($breakpoints, $key);
+
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+// max-width
+@mixin maxQ($key) {
+  $size: map.get($breakpoints, $key);
+
+  @media (max-width: $size) {
+    @content;
+  }
+}
