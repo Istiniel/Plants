@@ -152,6 +152,16 @@ button:hover, button:active {
   color: white;
 }
 
+.wrapper {
+  width: 100%;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  z-index: 100;
+}
+
 .nav {
   display: flex;
   align-items: center;
